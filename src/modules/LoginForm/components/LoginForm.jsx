@@ -17,7 +17,7 @@ export default class LoginForm extends React.Component{
     return (
        <div>
          <div className="auth__top">
-           <h2 className="auth__title">Войти в аккаунт</h2>
+           <h2 className="auth__title-h2">Войти в аккаунт</h2>
            <p className="auth__text">Пожалуйста, войдите в свой аккаунт</p>
          </div>
          <Block>
