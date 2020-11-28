@@ -1,0 +1,109 @@
+@import '../../style/utils/variables';
+
+.message {
+  $self: &;
+
+  &__content {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: max-content;
+  }
+
+  &__avatar {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 13px;
+    margin-bottom: 23px;
+
+    img {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__bubble {
+    background: $blue-color;
+    box-shadow: 0 5px 5px rgba(54, 116, 255, 0.196733);
+    border-radius: 12px 12px 12px 0;
+    padding: 15px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    line-height: 20px;
+    color: $white-color;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.5;
+  }
+
+  &__status {
+    position: absolute;
+    right: -25px;
+    bottom: 25px;
+    transition: .5s;
+  }
+
+  &__attachments {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__attachments-item {
+    margin: 0 10px;
+
+    img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+  }
+
+  &__isme {
+
+    #{$self}__content {
+      flex-direction: row-reverse;
+      margin-left: auto;
+    }
+
+    #{$self}__bubble {
+      background: $white-color;
+      border: 1px solid $white_light-color;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.0220444);
+      border-radius: 12px 12px 0 12px;
+    }
+
+    #{$self}__avatar {
+      margin-left: 13px;
+      margin-right: 0;
+    }
+
+    #{$self}__text {
+      color: $black-color;
+    }
+
+    #{$self}__info {
+      text-align: right;
+      flex-direction: row-reverse;
+    }
+
+    #{$self}__status {
+      right: auto;
+      left: -30px;
+    }
+
+    #{$self}__attachments {
+      flex-direction: row-reverse;
+    }
+  }
+}
